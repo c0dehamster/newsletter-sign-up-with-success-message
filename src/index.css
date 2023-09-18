@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* CSS reset by Andy Bell, modified */
+
+/* Box sizing rules, remove default paddings and margins */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* An utility for an invisible element */
+
+.sr-only {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* General styling */
+
+:root {
+	--color-primary-400: hsl(4, 100%, 67%);
+
+	--color-neutral-100: hsl(0, 0%, 100%);
+	--color-neutral-200: hsl(231, 7%, 60%);
+	--color-neutral-400: hsl(235, 18%, 26%);
+	--color-neutral-900: hsl(234, 29%, 20%);
+
+	--gradient-active: linear-gradient(
+		to right,
+		hsl(346, 100%, 66%),
+		hsl(13, 96%, 62%)
+	);
+
+	--font-size-100: 0.75rem;
+	--font-size-400: 1rem;
+	--font-size-800: 2.5rem;
+	--font-size-900: 3.5rem;
+
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}

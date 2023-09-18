@@ -1,0 +1,22 @@
+.sign-up {
+	display: grid;
+	grid-template-areas:
+		"illustration"
+		"contents";
+}
+
+.sign-up__contents {
+	grid-area: contents;
+
+	padding-inline: 1.5rem;
+	padding-block-start: 2rem;
+	padding-block-end: 2.5rem;
+
+	display: grid;
+	row-gap: 1rem;
+}
+.sign-up__illustration {
+	grid-area: illustration;
+
+	width: 100%;
+}
