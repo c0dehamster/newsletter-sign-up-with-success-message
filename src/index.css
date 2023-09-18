@@ -126,6 +126,7 @@ ul {
 .button {
 	position: relative;
 
+	width: 100%;
 	min-width: fit-content;
 
 	height: 3.5rem;
@@ -136,5 +137,18 @@ ul {
 	align-items: center;
 	overflow: hidden;
 
+	border: none;
+	color: var(--color-neutral-100);
+	background-color: var(--color-neutral-900);
+
+	/* A workaround for the transition to gradient is needed */
+
 	font-size: var(--font-size-400);
+	font-weight: var(--font-weight-bold);
+}
+
+/* Active states */
+
+.button:hover {
+	background: var(--gradient-active);
 }
