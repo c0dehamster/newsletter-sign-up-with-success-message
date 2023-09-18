@@ -105,3 +105,36 @@ select {
 body {
 	font-family: "Roboto", sans-serif;
 }
+
+p {
+	font-size: var(--font-size-400);
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1;
+	font-weight: var(--font-weight-bold);
+}
+
+ul {
+	list-style: none;
+}
+
+/* Utilities */
+
+.button {
+	position: relative;
+
+	min-width: fit-content;
+
+	height: 3.5rem;
+	border-radius: 0.5rem;
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	font-size: var(--font-size-400);
+}
