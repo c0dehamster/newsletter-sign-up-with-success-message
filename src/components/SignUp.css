@@ -26,7 +26,34 @@
 	row-gap: 1.5rem;
 }
 
+.form__input-wrapper {
+	display: grid;
+	grid-template-areas:
+		"label error"
+		"input input";
+	gap: 0.5rem;
+}
+
+.form__label,
+.form__error {
+	font-size: var(--font-size-100);
+	font-weight: var(--font-weight-bold);
+}
+
+.form__label {
+	grid-area: label;
+
+	color: var(--color-neutral-900);
+}
+
+.form__error {
+	justify-self: end;
+	color: var(--color-primary-400);
+}
+
 .form__input {
+	grid-area: input;
+
 	width: 100%;
 	height: 3.5rem;
 
