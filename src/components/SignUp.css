@@ -15,11 +15,38 @@
 	display: grid;
 	row-gap: 1rem;
 }
+
+/* Advantages list */
+
+.sign-up__list {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.sign-up__list-item {
+	position: relative;
+	padding-inline-start: 2.5rem;
+
+	color: var(--color-neutral-400);
+}
+
+/* Custom bullet point for the list items */
+
+.sign-up__list-item::before {
+	content: url(./images/icon-list.svg);
+	position: absolute;
+	left: 0;
+}
+
+/* Illustration */
+
 .sign-up__illustration {
 	grid-area: illustration;
 
 	width: 100%;
 }
+
+/* Form styles */
 
 .form {
 	display: grid;
