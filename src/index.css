@@ -99,6 +99,12 @@ select {
 	--font-size-800: 2.5rem;
 	--font-size-900: 3.5rem;
 
+	--font-size-heading: clamp(
+		var(--font-size-800),
+		10.67vw,
+		var(--font-size-900)
+	);
+
 	--font-weight-normal: 400;
 	--font-weight-bold: 700;
 }
@@ -109,13 +115,17 @@ body {
 
 p {
 	font-size: var(--font-size-400);
+	color: var(--color-neutral-400);
 }
 
 h1,
 h2,
 h3 {
 	line-height: 1;
+	font-size: var(--font-size-heading);
 	font-weight: var(--font-weight-bold);
+
+	color: var(--color-neutral-900);
 }
 
 ul {
