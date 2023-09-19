@@ -20,3 +20,43 @@
 
 	width: 100%;
 }
+
+.form {
+	display: grid;
+	row-gap: 1.5rem;
+}
+
+.form__input {
+	width: 100%;
+	height: 3.5rem;
+
+	padding-inline: 1.5rem;
+
+	outline: none;
+	background-color: var(--color-neutral-100);
+	border: 1px solid var(--color-neutral-200);
+	border-radius: 0.5rem;
+
+	color: var(--color-neutral-900);
+}
+
+/* Active states */
+
+.form__input:hover,
+.form__input:focus {
+	border-color: var(--color-neutral-900);
+}
+
+.form__input--error,
+.form__input--error:hover,
+.form__input--error:focus {
+	border-color: var(--color-primary-400);
+	color: var(--color-primary-400);
+	background-color: var(--color-primary-100);
+}
+
+.form__input--error::placeholder,
+.form__input--error:hover::placeholder,
+.form__input--error:focus::placeholder {
+	color: var(--color-primary-400);
+}
