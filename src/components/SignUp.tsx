@@ -30,7 +30,7 @@ export const SignUp = ({ handleSubmit }: { handleSubmit: () => void }) => {
 						handleSubmit()
 					}}>
 					<div className="form__input-wrapper">
-						<label htmlFor="" className="form__label">
+						<label htmlFor="email" className="form__label">
 							Email address
 						</label>
 
@@ -38,6 +38,8 @@ export const SignUp = ({ handleSubmit }: { handleSubmit: () => void }) => {
 
 						<input
 							type="text"
+							id="email"
+							name="email"
 							className="form__input"
 							placeholder="email@company.com"
 						/>
