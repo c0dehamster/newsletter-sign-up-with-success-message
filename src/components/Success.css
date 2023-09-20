@@ -17,3 +17,17 @@
 .success__heading {
 	padding-block-end: 1.5rem;
 }
+
+.success__email-link {
+	text-decoration: none;
+
+	color: var(--color-neutral-900);
+	font-weight: var(--font-weight-bold);
+}
+
+/* Active states */
+
+.success__email-link:hover,
+.success__email-link:focus {
+	border-bottom: 1px solid;
+}
