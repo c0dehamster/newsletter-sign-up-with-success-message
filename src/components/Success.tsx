@@ -1,6 +1,6 @@
 import "./Success.css"
 
-export const Success = () => {
+export const Success = ({ handleDismiss }: { handleDismiss: () => void }) => {
 	return (
 		<div className="success">
 			<div className="success__contents">
@@ -24,7 +24,9 @@ export const Success = () => {
 				</p>
 			</div>
 
-			<button className="button">Dismiss message</button>
+			<button className="button" onClick={handleDismiss}>
+				Dismiss message
+			</button>
 		</div>
 	)
 }
