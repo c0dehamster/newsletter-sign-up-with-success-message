@@ -3,6 +3,8 @@
 	grid-template-areas:
 		"illustration"
 		"contents";
+
+	background-color: var(--color-neutral-100);
 }
 
 .sign-up__contents {
@@ -12,8 +14,10 @@
 	padding-block-start: 2rem;
 	padding-block-end: 2.5rem;
 
-	display: grid;
-	row-gap: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.5rem;
 }
 
 /* Advantages list */
@@ -115,4 +119,19 @@
 .form__input--error:hover::placeholder,
 .form__input--error:focus::placeholder {
 	color: var(--color-primary-400);
+}
+
+/* Media query */
+
+@media screen and (min-width: 60rem) {
+	.sign-up {
+		grid-template-areas: "contents illustration";
+
+		max-width: 58rem;
+		height: fit-content;
+
+		padding: 1.5rem;
+
+		border-radius: 2rem;
+	}
 }
