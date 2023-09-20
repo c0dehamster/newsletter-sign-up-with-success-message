@@ -9,7 +9,7 @@
 	background-color: var(--color-neutral-400);
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 45rem) {
 	.app {
 		justify-content: center;
 		padding-inline: 2.5rem;
