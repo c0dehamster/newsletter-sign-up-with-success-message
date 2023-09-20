@@ -1,6 +1,6 @@
 import "./SignUp.css"
 
-export const SignUp = () => {
+export const SignUp = ({ handleSubmit }: { handleSubmit: () => void }) => {
 	return (
 		<div className="sign-up">
 			<div className="sign-up__contents">
@@ -22,7 +22,13 @@ export const SignUp = () => {
 					<li className="sign-up__list-item">And much more!</li>
 				</ul>
 
-				<form action="" className="form">
+				<form
+					action=""
+					className="form"
+					onSubmit={e => {
+						e.preventDefault()
+						handleSubmit()
+					}}>
 					<div className="form__input-wrapper">
 						<label htmlFor="" className="form__label">
 							Email address
