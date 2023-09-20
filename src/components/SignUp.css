@@ -3,6 +3,7 @@
 	grid-template-areas:
 		"illustration"
 		"contents";
+	gap: 1.5rem;
 
 	background-color: var(--color-neutral-100);
 }
@@ -11,7 +12,7 @@
 	grid-area: contents;
 
 	padding-inline: 1.5rem;
-	padding-block-start: 2rem;
+	padding-block-start: 0.5rem;
 	padding-block-end: 2.5rem;
 
 	display: flex;
@@ -125,6 +126,7 @@
 
 @media screen and (min-width: 60rem) {
 	.sign-up {
+		grid-template-columns: 1fr 1fr;
 		grid-template-areas: "contents illustration";
 
 		max-width: 58rem;
@@ -133,5 +135,10 @@
 		padding: 1.5rem;
 
 		border-radius: 2rem;
+	}
+
+	.sign-up__contents {
+		padding-block: 0;
+		padding-inline: 2.5rem;
 	}
 }

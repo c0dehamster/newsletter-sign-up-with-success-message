@@ -45,12 +45,12 @@ export const SignUp = () => {
 
 			<picture className="sign-up__illustration">
 				<source
-					media="(max-width: 719px)"
+					media="(max-width: 59.9rem)"
 					srcSet="./images/illustration-sign-up-mobile.svg 375w"
 				/>
 
 				<source
-					media="(min-width: 720px)"
+					media="(min-width: 60rem)"
 					srcSet="./images/illustration-sign-up-desktop.svg 400w"
 				/>
 

@@ -12,5 +12,6 @@
 @media screen and (min-width: 60rem) {
 	.app {
 		justify-content: center;
+		padding-inline: 2.5rem;
 	}
 }
