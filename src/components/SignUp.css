@@ -3,10 +3,6 @@
 	grid-template-areas:
 		"illustration"
 		"contents";
-
-	/* temporary */
-
-	display: none;
 }
 
 .sign-up__contents {
@@ -44,7 +40,7 @@
 
 /* Illustration */
 
-.sign-up__illustration {
+.sign-up__image {
 	grid-area: illustration;
 
 	width: 100%;

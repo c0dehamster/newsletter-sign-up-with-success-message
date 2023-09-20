@@ -43,11 +43,23 @@ export const SignUp = () => {
 				</form>
 			</div>
 
-			<img
-				src="./images/illustration-sign-up-mobile.svg"
-				alt=""
-				className="sign-up__illustration"
-			/>
+			<picture className="sign-up__illustration">
+				<source
+					media="(max-width: 719px)"
+					srcSet="./images/illustration-sign-up-mobile.svg 375w"
+				/>
+
+				<source
+					media="(min-width: 720px)"
+					srcSet="./images/illustration-sign-up-desktop.svg 400w"
+				/>
+
+				<img
+					src="./images/illustration-sign-up-mobile.svg"
+					alt=""
+					className="sign-up__image"
+				/>
+			</picture>
 		</div>
 	)
 }
