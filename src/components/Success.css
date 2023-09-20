@@ -1,5 +1,19 @@
 .success {
-	/* temporary */
+	height: 100%;
 
-	display: none;
+	padding-inline: 1.5rem;
+	padding-block-start: 9.25rem;
+	padding-block-end: 2.5rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.success__icon {
+	padding-block-end: 2.5rem;
+}
+
+.success__heading {
+	padding-block-end: 1.5rem;
 }

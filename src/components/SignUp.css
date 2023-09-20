@@ -3,6 +3,10 @@
 	grid-template-areas:
 		"illustration"
 		"contents";
+
+	/* temporary */
+
+	display: none;
 }
 
 .sign-up__contents {
@@ -13,7 +17,7 @@
 	padding-block-end: 2.5rem;
 
 	display: grid;
-	row-gap: 1rem;
+	row-gap: 1.5rem;
 }
 
 /* Advantages list */
@@ -49,6 +53,8 @@
 /* Form styles */
 
 .form {
+	padding-block-start: 1rem;
+
 	display: grid;
 	row-gap: 1.5rem;
 }
