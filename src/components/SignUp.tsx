@@ -1,6 +1,18 @@
+import { useForm, SubmitHandler } from "react-hook-form"
+
 import "./SignUp.css"
 
-export const SignUp = ({ handleSubmit }: { handleSubmit: () => void }) => {
+interface FormInput {
+	email: string
+}
+
+export const SignUp = ({
+	onSubmit,
+}: {
+	onSubmit: SubmitHandler<FormInput>
+}) => {
+	const { register, handleSubmit } = useForm<FormInput>()
+
 	return (
 		<div className="sign-up">
 			<div className="sign-up__contents">
@@ -25,10 +37,7 @@ export const SignUp = ({ handleSubmit }: { handleSubmit: () => void }) => {
 				<form
 					action=""
 					className="form"
-					onSubmit={e => {
-						e.preventDefault()
-						handleSubmit()
-					}}>
+					onSubmit={handleSubmit(onSubmit)}>
 					<div className="form__input-wrapper">
 						<label htmlFor="email" className="form__label">
 							Email address
@@ -39,9 +48,9 @@ export const SignUp = ({ handleSubmit }: { handleSubmit: () => void }) => {
 						<input
 							type="text"
 							id="email"
-							name="email"
 							className="form__input"
 							placeholder="email@company.com"
+							{...register("email")}
 						/>
 					</div>
 
