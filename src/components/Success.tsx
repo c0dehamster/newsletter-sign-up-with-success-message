@@ -1,6 +1,12 @@
 import "./Success.css"
 
-export const Success = ({ handleDismiss }: { handleDismiss: () => void }) => {
+export const Success = ({
+	email,
+	handleDismiss,
+}: {
+	email: string
+	handleDismiss: () => void
+}) => {
 	return (
 		<div className="success">
 			<div className="success__contents">
@@ -14,10 +20,8 @@ export const Success = ({ handleDismiss }: { handleDismiss: () => void }) => {
 
 				<p className="success__details">
 					A confirmation email has been sent to{" "}
-					<a
-						href="mailto:ash@loremcompany.com"
-						className="success__email-link">
-						ash@loremcompany.com
+					<a href={`mailto:${email}`} className="success__email-link">
+						{email}
 					</a>
 					. Please open it and click the button inside to confirm your
 					subscription.
