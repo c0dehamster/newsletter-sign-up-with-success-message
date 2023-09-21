@@ -1,22 +1,17 @@
 import { useState } from "react"
 
-import { SubmitHandler } from "react-hook-form"
-
 import "./App.css"
 
 import { SignUp } from "./components/SignUp"
 import { Success } from "./components/Success"
 
-interface FormInput {
-	email: string
-}
-
 function App() {
 	const [signed, setSigned] = useState(false)
+	const [email, setEmail] = useState("")
 
-	const onSubmit: SubmitHandler<FormInput> = data => {
+	const onSubmit = (data: { email: string }) => {
 		setSigned(true)
-		console.log(data)
+		setEmail(data.email)
 	}
 
 	const handleDismiss = () => setSigned(false)
@@ -26,7 +21,7 @@ function App() {
 			{!signed ? (
 				<SignUp {...{ onSubmit }}></SignUp>
 			) : (
-				<Success {...{ handleDismiss }}></Success>
+				<Success {...{ email, handleDismiss }}></Success>
 			)}
 		</div>
 	)
