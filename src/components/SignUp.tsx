@@ -64,7 +64,13 @@ export const SignUp = ({
 							aria-invalid={errors.email ? "true" : "false"}
 						/>
 
-						{errors.email && (
+						{errors.email && errors.email.type === "required" && (
+							<p className="form__error" role="alert">
+								Email cannot be empty!
+							</p>
+						)}
+
+						{errors.email && errors.email.type === "pattern" && (
 							<p className="form__error" role="alert">
 								Valid email required!
 							</p>
