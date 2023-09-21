@@ -11,7 +11,11 @@ export const SignUp = ({
 }: {
 	onSubmit: SubmitHandler<FormInput>
 }) => {
-	const { register, handleSubmit } = useForm<FormInput>()
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<FormInput>()
 
 	return (
 		<div className="sign-up">
@@ -22,16 +26,18 @@ export const SignUp = ({
 					Join 60,000+ product managers receiving monthly updates on:
 				</p>
 
-				<ul className="sign-up__list">
-					<li className="sign-up__list-item">
+				<ul className="sign-up__list" role="list">
+					<li className="sign-up__list-item" role="listitem">
 						Product discovery and building what matters
 					</li>
 
-					<li className="sign-up__list-item">
+					<li className="sign-up__list-item" role="listitem">
 						Measuring to ensure updates are a success
 					</li>
 
-					<li className="sign-up__list-item">And much more!</li>
+					<li className="sign-up__list-item" role="listitem">
+						And much more!
+					</li>
 				</ul>
 
 				<form
@@ -43,15 +49,26 @@ export const SignUp = ({
 							Email address
 						</label>
 
-						<p className="form__error">Valid email required!</p>
-
 						<input
 							type="text"
 							id="email"
 							className="form__input"
 							placeholder="email@company.com"
-							{...register("email")}
+							{...register("email", {
+								required: true,
+								pattern: {
+									value: /^\w+@\w+\.\w+$/,
+									message: "Valid email required!",
+								},
+							})}
+							aria-invalid={errors.email ? "true" : "false"}
 						/>
+
+						{errors.email && (
+							<p className="form__error" role="alert">
+								Valid email required!
+							</p>
+						)}
 					</div>
 
 					<button className="button">
