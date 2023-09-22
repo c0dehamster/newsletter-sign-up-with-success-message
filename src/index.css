@@ -166,38 +166,3 @@ ul {
 		var(--color-active-right)
 	);
 }
-
-/* An attempt to animate the gradient */
-
-@supports (syntax: "<color>") {
-	/* Custom properties for the animated gradient */
-
-	@property --color-active-left {
-		syntax: "<color>";
-		inherits: true;
-		initial-value: var(--color-neutral-900);
-	}
-
-	@property --color-active-right {
-		syntax: "<color>";
-		inherits: true;
-		initial-value: var(--color-neutral-900);
-	}
-
-	.button {
-		background: linear-gradient(
-			135deg,
-			var(--color-active-left),
-			var(--color-active-right)
-		);
-
-		transition: --color-active-left 200ms linear,
-			--color-active-right 200ms linear;
-	}
-
-	.button:hover,
-	.button:focus {
-		--color-active-left: hsl(346, 100%, 66%);
-		--color-active-right: hsl(13, 96%, 62%);
-	}
-}
