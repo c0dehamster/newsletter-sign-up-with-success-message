@@ -88,11 +88,8 @@ select {
 	--color-neutral-400: hsl(235, 18%, 26%);
 	--color-neutral-900: hsl(234, 29%, 20%);
 
-	--gradient-active: linear-gradient(
-		to right,
-		hsl(346, 100%, 66%),
-		hsl(13, 96%, 62%)
-	);
+	--color-active-left: hsl(346, 100%, 66%);
+	--color-active-right: hsl(13, 96%, 62%);
 
 	--font-size-100: 0.75rem;
 	--font-size-400: 1rem;
@@ -150,9 +147,10 @@ ul {
 
 	border: none;
 	color: var(--color-neutral-100);
-	background-color: var(--color-neutral-900);
 
 	/* A workaround for the transition to gradient is needed */
+
+	background-color: var(--color-neutral-900);
 
 	font-size: var(--font-size-400);
 	font-weight: var(--font-weight-bold);
@@ -160,6 +158,46 @@ ul {
 
 /* Active states */
 
-.button:hover {
-	background: var(--gradient-active);
+.button:hover,
+.button:focus {
+	background: linear-gradient(
+		135deg,
+		var(--color-active-left),
+		var(--color-active-right)
+	);
+}
+
+/* An attempt to animate the gradient */
+
+@supports (syntax: "<color>") {
+	/* Custom properties for the animated gradient */
+
+	@property --color-active-left {
+		syntax: "<color>";
+		inherits: true;
+		initial-value: var(--color-neutral-900);
+	}
+
+	@property --color-active-right {
+		syntax: "<color>";
+		inherits: true;
+		initial-value: var(--color-neutral-900);
+	}
+
+	.button {
+		background: linear-gradient(
+			135deg,
+			var(--color-active-left),
+			var(--color-active-right)
+		);
+
+		transition: --color-active-left 200ms linear,
+			--color-active-right 200ms linear;
+	}
+
+	.button:hover,
+	.button:focus {
+		--color-active-left: hsl(346, 100%, 66%);
+		--color-active-right: hsl(13, 96%, 62%);
+	}
 }
