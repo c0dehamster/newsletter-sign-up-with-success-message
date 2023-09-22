@@ -11,6 +11,7 @@
 	justify-content: space-between;
 
 	background-color: var(--color-neutral-100);
+	box-shadow: 0 0 2rem 1rem var(--color-neutral-900);
 }
 
 .success__icon {
