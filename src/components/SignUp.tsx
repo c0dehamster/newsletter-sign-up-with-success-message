@@ -15,7 +15,9 @@ export const SignUp = ({
 		register,
 		handleSubmit,
 		formState: { errors },
-	} = useForm<FormInput>()
+	} = useForm<FormInput>({
+		mode: "onTouched",
+	})
 
 	return (
 		<div className="sign-up">
