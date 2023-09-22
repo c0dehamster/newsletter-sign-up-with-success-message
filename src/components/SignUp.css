@@ -38,7 +38,7 @@
 /* Custom bullet point for the list items */
 
 .sign-up__list-item::before {
-	content: url(./images/icon-list.svg);
+	content: url(../assets/images/icon-list.svg);
 	position: absolute;
 	left: 0;
 }
