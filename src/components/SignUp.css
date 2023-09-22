@@ -105,9 +105,12 @@
 
 /* Active states */
 
-.form__input:hover,
-.form__input:focus {
+.form__input:hover {
 	border-color: var(--color-neutral-900);
+}
+
+.form__input:focus {
+	border: 2px solid var(--color-neutral-900);
 }
 
 .form__input--error,

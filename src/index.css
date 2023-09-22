@@ -88,8 +88,8 @@ select {
 	--color-neutral-400: hsl(235, 18%, 26%);
 	--color-neutral-900: hsl(234, 29%, 20%);
 
-	--color-active-left: hsl(346, 100%, 66%);
-	--color-active-right: hsl(13, 96%, 62%);
+	--color-active-pink: hsl(346, 100%, 66%);
+	--color-active-orange: hsl(13, 96%, 62%);
 
 	--font-size-100: 0.75rem;
 	--font-size-400: 1rem;
@@ -133,6 +133,7 @@ ul {
 
 .button {
 	position: relative;
+	transform-style: preserve-3d; /* For the gradient shadow */
 
 	width: 100%;
 	min-width: fit-content;
@@ -143,12 +144,9 @@ ul {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
 
 	border: none;
 	color: var(--color-neutral-100);
-
-	/* A workaround for the transition to gradient is needed */
 
 	background-color: var(--color-neutral-900);
 
@@ -162,7 +160,27 @@ ul {
 .button:focus {
 	background: linear-gradient(
 		135deg,
-		var(--color-active-left),
-		var(--color-active-right)
+		var(--color-active-pink),
+		var(--color-active-orange)
 	);
+}
+
+/* Gradient shadow */
+
+.button:hover::before,
+.button:focus::before {
+	content: "";
+	position: absolute;
+	inset: 0px;
+	transform: translate3d(1rem, 0.5rem, -1px);
+
+	border-radius: 0.5rem;
+
+	background: linear-gradient(
+		135deg,
+		var(--color-active-pink),
+		var(--color-active-orange)
+	);
+	opacity: 0.75;
+	filter: blur(1rem);
 }
