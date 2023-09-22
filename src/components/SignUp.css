@@ -45,9 +45,11 @@
 
 /* Illustration */
 
-.sign-up__image {
+.sign-up__illustration {
 	grid-area: illustration;
+}
 
+.sign-up__image {
 	width: 100%;
 }
 
