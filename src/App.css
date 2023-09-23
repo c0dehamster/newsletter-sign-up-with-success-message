@@ -10,10 +10,15 @@
 	background-color: var(--color-neutral-400);
 }
 
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 40rem) {
 	.app {
-		justify-content: center;
 		padding-inline: 2.5rem;
 		padding-block: 4rem;
+	}
+}
+
+@media screen and (min-width: 60rem) {
+	.app {
+		justify-content: center;
 	}
 }

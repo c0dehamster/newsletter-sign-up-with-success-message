@@ -10,10 +10,11 @@
 }
 
 .sign-up__contents {
+	max-width: 40rem;
 	grid-area: contents;
 
 	padding-inline: 1.5rem;
-	padding-block-start: 0.5rem;
+	padding-block-start: 1rem;
 	padding-block-end: 2.5rem;
 
 	display: flex;
@@ -52,6 +53,7 @@
 
 .sign-up__image {
 	width: 100%;
+	max-width: 40rem; /* To match the max size of the details section */
 }
 
 /* Form styles */
@@ -79,7 +81,6 @@
 
 .form__label {
 	grid-area: label;
-
 	color: var(--color-neutral-900);
 }
 
@@ -130,21 +131,38 @@
 
 /* Media query */
 
+@media screen and (min-width: 40rem) {
+	.sign-up {
+		border-radius: 2rem;
+	}
+
+	.sign-up__contents {
+		padding-inline: 2.5rem;
+	}
+
+	.sign-up__illustration {
+		border-top-left-radius: 2rem;
+		border-top-right-radius: 2rem;
+		overflow: hidden;
+	}
+}
+
 @media screen and (min-width: 60rem) {
 	.sign-up {
-		grid-template-columns: 1fr 1fr;
 		grid-template-areas: "contents illustration";
 
 		max-width: 58rem;
 		height: fit-content;
 
 		padding: 1.5rem;
-
-		border-radius: 2rem;
 	}
 
 	.sign-up__contents {
+		max-width: 28.5rem;
 		padding-block: 0;
-		padding-inline: 2.5rem;
+	}
+
+	.sign-up__illustration {
+		border-radius: 0;
 	}
 }

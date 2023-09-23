@@ -65,18 +65,6 @@ select {
 	}
 }
 
-/* An utility for an invisible element */
-
-.sr-only {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-}
-
 /* General styling */
 
 :root {
@@ -147,7 +135,6 @@ ul {
 
 	border: none;
 	color: var(--color-neutral-100);
-
 	background-color: var(--color-neutral-900);
 
 	font-size: var(--font-size-400);
