@@ -1,6 +1,5 @@
 .success {
 	height: 100%;
-	max-width: 31.5rem;
 
 	padding-inline: 1.5rem;
 	padding-block-start: 9.25rem;
@@ -42,8 +41,16 @@
 
 /* Media query */
 
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 32rem) {
 	.success {
+		padding: 4rem;
+	}
+}
+
+@media screen and (min-width: 40rem) {
+	.success {
+		max-width: 31.5rem;
+
 		height: fit-content;
 		padding: 4rem;
 		border-radius: 2rem;
