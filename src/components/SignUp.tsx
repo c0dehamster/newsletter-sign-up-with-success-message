@@ -43,7 +43,7 @@ export const SignUp = ({
 				</ul>
 
 				<form
-					action=""
+					action="get"
 					className="form"
 					onSubmit={handleSubmit(onSubmit)}>
 					<div className="form__input-wrapper">

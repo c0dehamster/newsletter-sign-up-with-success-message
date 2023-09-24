@@ -17,13 +17,13 @@ function App() {
 	const handleDismiss = () => setSigned(false)
 
 	return (
-		<div className="app">
+		<main className="app">
 			{!signed ? (
 				<SignUp {...{ onSubmit }}></SignUp>
 			) : (
 				<Success {...{ email, handleDismiss }}></Success>
 			)}
-		</div>
+		</main>
 	)
 }
 
